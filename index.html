@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TVING</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    
+    <script>
+     $(function(){
+     $('.bxslider').bxSlider({
+            captions:true,
+            //slideWidth:600,  //수정
+            auto:true,
+            autoControls:false,
+            stopAutoOnclick:true,
+          });
+     
+     var mySlider=$("#slide_banner").bxSlider({
+      mode:"horizontal",   // 가로 수평으로 슬라이드 됩니다.
+      speed:500,              // 이동 속도를 설정합니다.
+      pager:false,            // 현재 위치 페이징 표시 여부 설정.
+      moveSlides:1,         // 슬라이드 이동시 갯수 설정.
+      slideWidth:500,        // 슬라이드 마다 너비 설정.
+      minSlides:5,           // 최소 노출 개수를 설정합니다.
+      maxSlides:5,          // 최대 노출 개수를 설정합니다.
+      slideMargin:40,      // 슬라이드간의 간격을 설정합니다.
+      auto:true,             // 자동으로 흐를지 설정합니다.
+      autoHover:true,    // 마우스 오버시 정시킬지 설정합니다.
+      controls:false        // 이전 다음 버튼 노출 여부 설정합니다.
+   });
+//이전 버튼을 클릭하면 이전 슬라이드로 전환됩니다.
+   $("#prevBtn").on("click",function(){
+    mySlider.goToPrevSlide();  //이전 슬라이드 배너로 이동됩니다.
+    return false; //<a>에 링크를 차단합니다.
+   });
+//다음 버튼을 클릭하면 다음 슬라이드로 전환됩니다.
+   $("#nextBtn").on("click",function(){
+    mySlider.goToNextSlide();  //다음 슬라이드 배너로 이동됩니다.
+    return false;
+   });
+        
+ })    
+    </script>
+    
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div class="top_header">
+                <div class="inner">
+                    <ul class="site">
+                        <li>개인</li>
+                        <li>단체</li>
+                        <li>지역방송</li>
+                    </ul>
+                    <ul class="util">
+                        <li>로그인</li>
+                        <li>회원가입</li>
+                        <li>회사소개</li>
+                        <li>ENGLISH</li>
+                        <div class="space"></div>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom_header">
+                <div class="inner">
+                    <ul class="menu">
+                        <li class="nav"><a href="sub1.html">LIVE</a>
+                            <div class="submenu">
+                                <ul class="m1">
+                                    <li><a href="sub1.html">홈</a></li>
+                                    <li><a href="sub1.html">실시간TV</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav"><a href="sub1.html">VOD</a>
+                            <div class="submenu">
+                                <ul class="m2">
+                                    <li><a href="sub1.html">홈</a></li>
+                                    <li><a href="sub1.html">인기</a></li>
+                                    <li><a href="sub1.html">최신</a></li>
+                                    <li><a href="sub1.html">장르추천</a></li>
+                                    <li><a href="sub1.html">테마</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav"><a href="sub1.html">MOVIE</a>
+                            <div class="submenu">
+                                <ul class="m3">
+                                    <li><a href="sub1.html">홈</a></li>
+                                    <li><a href="sub1.html">최신</a></li>
+                                    <li><a href="sub1.html">월정액영화관</a></li>
+                                    <li><a href="sub1.html">테마</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav"><a href="sub1.html">MALL</a>
+                            <div class="submenu">
+                                <ul class="m4">
+                                    <li><a href="sub1.html">이용권</a></li>
+                                    <li><a href="sub1.html">넘버원굿즈샵</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <div class="space"></div>
+                    </ul>
+                    <div class="logo">
+                        <a href="index.html"><img src="img/logo.png"></a>
+                    </div>
+                    <ul class="side">
+                        <li><a href="sub2.html">CLIP</a></li>
+                        <li><a href="sub2.html">KIDS</a></li>
+                        <li>
+                            <i>
+                                <img src="img/icon%201.png">
+                            </i>
+                        </li>
+                        <li>
+                            <i>
+                                <img src="img/icon2.png">
+                            </i>
+                        </li>
+                        <div class="space"></div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="mainimg">
+           <div class="inner">
+       <div class="bxslider">
+        <div>
+                   <div class="main_left">
+                    <p>화제의 드라마</p>
+                    <h1>매주 목요일,<br>슬기로운 의사생활</h1>
+                    <p>목요일 밤9시엔 tvn<br>3월12일 첫방송 놓치지 마세요</p>
+                    <div class="btn1">보러가기</div>
+                    <div class="space"></div>
+                </div>
+                <div class="main_right">
+                    <img src="img/main_img.png"> 
+                    
+                    <div class="space"></div>
+                </div>
+        </div>
+        <div>
+          <div>
+                   <div class="main_left">
+                    <p>화제의 드라마</p>
+                    <h1>매주 목요일,<br>슬기로운 의사생활</h1>
+                    <p>목요일 밤9시엔 tvn<br>3월12일 첫방송 놓치지 마세요</p>
+                    <div class="btn1">보러가기</div>
+                    <div class="space"></div>
+                </div>
+                <div class="main_right">
+                    <img src="img/main_img.png"> 
+                    
+                    <div class="space"></div>
+                </div>
+        </div>
+        </div>
+        <div>
+          <div>
+                   <div class="main_left">
+                    <p>화제의 예능</p>
+                    <h1>매주 일요일,<br>대탈출 시즌 3</h1>
+                    <p>일요일 밤9시엔 tvn<br>3월12일 첫방송 놓치지 마세요</p>
+                    <div class="btn1">보러가기</div>
+                    <div class="space"></div>
+                </div>
+                <div class="main_right">
+                    <img src="img/main_img.png"> 
+                    
+                    <div class="space"></div>
+                </div>
+        </div>
+        </div>         
+        <div>
+          <div>
+                   <div class="main_left">
+                    <p>화제의 드라마</p>
+                    <h1>매주 목요일,<br>슬기로운 의사생활</h1>
+                    <p>목요일 밤9시엔 tvn<br>3월12일 첫방송 놓치지 마세요</p>
+                    <div class="btn1">보러가기</div>
+                    <div class="space"></div>
+                </div>
+                <div class="main_right">
+                    <img src="img/main_img.png"> 
+                    
+                    <div class="space"></div>
+                </div>
+        </div>      
+      </div>
+               </div>
+
+            </div> 
+        </div> 
+        <div class="contents">
+            <div class="box1">
+                <div class="besttitle">
+                    <h2><span>LIVE</span>방송</h2>
+                    <p>실시간 인기채널</p>
+                </div>
+                <div class="inner">
+                    <div class="rank">
+                        <img src="img/box_img%201.jpg">
+                        <div class="box1_icon1">
+                            <div>
+                                <img src="img/ytn.png">
+                            </div>
+                            <div>
+                                <h3>뉴스특보</h3>
+                                <p>31.1%</p>
+                            </div>
+                            <div>
+                                <h1>1</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rank">
+                        <img src="img/box_img%202.jpg">
+                        <div class="box1_icon2">
+                            <div>
+                                <img src="img/tvn.png">
+                            </div>
+                            <div>
+                                <h3>슬기로운 의사생활</h3>
+                                <p>17.6%</p>
+                            </div>
+                            <div>
+                                <h1>2</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rank">
+                        <img src="img/box_img%203.jpg">
+                        <div class="box1_icon3">
+                            <div>
+                                <img src="img/%EC%97%B0%ED%95%A9%EB%89%B4%EC%8A%A4.png">
+                            </div>
+                            <div>
+                                <h3>뉴스 포커스</h3>
+                                <p>17.2%</p>
+                            </div>
+                            <div>
+                                <h1>3</h1>
+                            </div>
+                            <div class="space"></div>
+                        </div>
+                    </div>
+                    <div class="space"></div>
+                    <div class="inner">
+                        <div class="rank2">
+                            <div class="cha">
+                                <div>
+                                    <img src="img/%EC%B1%84%EB%84%90a.png">
+                                </div>
+                                <div class="cha_text">
+                                    <h3>김진의 돌직구쇼</h3>
+                                    <p>6.7%</p>
+                                </div>
+                                <div class="ch4">
+                                    <h1>4</h1>
+                                </div>
+                            </div>
+                            <div class="xtvn">
+                                <div>
+                                    <img src="img/xtvn.png">
+                                </div>
+                                <div>
+                                    <h3>대탈출3 4화</h3>
+                                    <p>5.6%</p>
+                                </div>
+                                <div>
+                                    <h1>5</h1>
+                                </div>
+                            </div>
+                            <div class="jtbc">
+                                <div>
+                                    <img src="img/JTBC.png">
+                                </div>
+                                <div>
+                                    <h3>차이나는 클라스 149화</h3>
+                                    <p>4.9%</p>
+                                </div>
+                                <div>
+                                    <h1>6</h1>
+                                </div>
+                            </div>
+                            <div class="space"></div>
+                        </div>
+                    </div>
+                    <div class="space"></div>
+                </div>
+            </div>
+            <div class="box2">
+                <div class="inner">
+                    <p>무비프리미엄 9,900원<br>최신 인기 영화 약 4,000건 언제 어디서나 무제한 시청</p>
+
+                    <ul>
+                        <li>
+                            <i>
+                                <img src="img/icon5.png">
+                            </i>
+                            <p>지하철</p>
+                        </li>
+                        <li>
+                            <i>
+                                <img src="img/icon6.png">
+                            </i>
+                            <p>비행기</p>
+                        </li>
+                        <li>
+                            <i>
+                                <img src="img/icon7.png">
+                            </i>
+                            <p>버스</p>
+                        </li>
+                        <li>
+                            <i>
+                                <img src="img/icon8.png">
+                            </i>
+                            <p>집</p>
+                        </li>
+                        <li>
+                            <i>
+                                <img src="img/icon9.png">
+                            </i>
+                            <p>강의실</p>
+                        </li>
+                        <div class="space"></div>
+                    </ul>
+                </div>
+                <div class="space"></div>
+            </div>
+            <div class="box3">
+                <h2>월정액 최신 영화</h2>
+                <!--<div class="vodSlider">
+                    <div class="btn_prev">
+                        <img src="img/icon3.png">
+                    </div>
+                    <div class="vod_list">
+                        <div class="slide">
+                            <img src="img/movie%201.jpg">
+                        </div>
+                        <div class="slide">
+                            <img src="img/movie%202.jpg">
+                            <p class="c">천문 : 하늘에 묻는다</p>
+                        </div>
+                        <div class="slide">
+                            <img src="img/movie%203.jpg">
+                            <p class="b">시동</p>
+                        </div>
+                        <div class="slide">
+                            <img src="img/movie%204.jpg">
+                            <p class="d">[영어자막] 기생충</p>
+                        </div>
+                        <div class="slide">
+                            <img src="img/movie%205.jpg">
+                        </div>
+                        <div class="space"></div>
+                    </div>
+                    <div class="btn_next">
+                        <img src="img/icon4.png">
+                    </div>
+                </div> -->
+                <div id="banner_wrap">
+                <div class="inner">
+      <ul id="slide_banner">
+         <li><a href="#"><img src="img/movie%201.jpg" alt="사진1" /></a>
+         <p class="q">블랙머니</p></li>
+         <li><a href="#"><img src="img/movie%202.jpg" alt="사진2" /></a>
+         <p class="c">천문 : 하늘에 묻는다</p></li>
+         <li><a href="#"><img src="img/movie%203.jpg" alt="사진3" /></a>
+         <p class="b">시동</p></li>
+         <li><a href="#"><img src="img/movie%204.jpg" alt="사진4" /></a>
+         <p class="d">[영어자막] 기생충</p></li>
+         <li><a href="#"><img src="img/movie%205.jpg" alt="사진5" /></a>
+         <p class="e">미래에서 생긴일</p></li>
+      </ul>
+      <p><a href="#" id="prevBtn"><img src="img/icon3.png" alt="이전버튼" /></a></p>
+      <p><a href="#" id="nextBtn"><img src="img/icon4.png" alt="다음버튼" /></a></p>
+   </div>
+           </div>
+            </div>
+            <div class="box4">
+                <h2>월정액 이용권</h2>
+                <p>CJ ONE 회원가입 하시고 하인 혜택 받으세요</p>
+                <div class="inner">
+                    <ul>
+                        <li>
+                            <i class="a">
+                                <img src="img/icon10.jpg">
+                            </i>
+                            <p>티빙 무제한</p>
+                        </li>
+                        <li>
+                            <i class="a">
+                                <img src="img/icon11.jpg">
+                            </i>
+                            <p>티빙 무제한플러스</p>
+                        </li>
+                        <li>
+                            <i class="a">
+                                <img src="img/icon12.jpg">
+                            </i>
+                            <p>티빙 프리미엄권</p>
+                        </li>
+                        <li>
+                            <i class="a">
+                                <img src="img/icon13.jpg">
+                            </i>
+                            <p>청소년 할인권</p>
+                        </li>
+                        <div class="space"></div>
+                    </ul>
+                </div>
+            </div>
+            <div class="box5">
+                <h1>스타워즈 라이즈 오브 스카이워커</h1>
+                <p>스타워즈 라이즈 스카이워커 출시기념 이벤트<br>2020.03.17~2020.03.30</p>
+                <div class="btn">MORE</div>
+            </div>
+            <div class="box6">
+                <div class="inner">
+                    <div class="box6_left">
+                        <h5>공지사항</h5>
+                        <p>[안내] CJ ONE 시스템 점검 안내(2020년 3월 20일 금 02:00~06:00)</p>
+                    </div>
+                    <div class="box6_right">
+                        <img src="img/feacbook.jpg">
+                        <div class="btn4">
+                            <from>
+                                <select class="brand">
+                                    <option value="brand" selected>브랜드바로가기
+                                    <option value="brand">a
+                                    <option value="brand">a
+                                    <option value="brand">a
+                                </select>
+                            </from>
+                        </div>
+                        <div class="btn5">
+                            <from>
+
+                                <select class="fac">
+                                    <option>계열사바로가기
+                                    <option>계열사바로가기
+                                    <option>계열사바로가기
+                                </select>
+                            </from>
+                        </div>
+                    </div>
+                </div>
+                <div class="space"></div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="top_footer">
+                <div class="inner">
+                    <ul>
+                        <li>고객센터</li>
+                        <li>사이트맵</li>
+                        <li>이용약관</li>
+                        <li>개인정보 처리방침</li>
+                        <li>청소년 보호정책</li>
+                        <li>법적고지</li>
+                        <li>이벤트</li>
+                        <li>티빙몰 바로가기</li>
+                        <div class="space"></div>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom_footer">
+                <div class="inner">
+                    <div class="f_logo">
+                        <img src="img/flogo.png">
+                    </div>
+                    <div class="copyright">
+                        <ul>
+                            <li><span>주소</span>서울시 서초구 과천대로 870-13</li>
+                            <li><span>대표자</span>허민희, 허민호</li>
+                            <li><span>사업자등록번호</span>106-81-51510</li>
+                            <li><span>개인정보관리책임자</span>고창남</li>
+                            <div class="space"></div>
+                        </ul>
+                        <p>Copyright © 2020 CJ ENM All right reserved.</p>
+                    </div>
+                    <div class="info">
+                        <ul>
+                            <li>
+                                <span>고객센터</span>
+                                1670-125(펼일 09시~18시)</li>
+                            <div class="space"></div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
